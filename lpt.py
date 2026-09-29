@@ -1,4 +1,4 @@
-from main import resolve_instancia, resolve_todas_instancias #salvar_resumo_csv
+from main import resolve_instancia, resolve_todas_instancias, salvar_resumo_csv
 
 
 def prioridade_lpt(candidato):
@@ -21,10 +21,9 @@ def solver(path_instancia, verbose=False):
 
 
 if __name__ == '__main__':
-#    resumo = resolve_todas_instancias(
- #       'instancias',
-  #      prioridade_lpt,
-   #     caminho_csv_detalhado='solucoesLPT_detalhado.csv'
-    #)
-    #salvar_resumo_csv(resumo, 'solucoesLPT_resumo.csv')
-    solver('ft06', prioridade_lpt)
+    resumo = resolve_todas_instancias(
+        'instancias',
+        prioridade_lpt,
+        caminho_csv_detalhado='solucoesLPT_detalhado.csv'
+    )
+    salvar_resumo_csv(resumo, 'solucoesLPT_resumo.csv')
