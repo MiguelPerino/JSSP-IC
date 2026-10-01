@@ -55,7 +55,7 @@ for idx, nome_instancia in enumerate(instancias, 1):
         makespan, _ = resolve_instancia(caminho, prioridade_func)
         resultados[nome_instancia][nome_heuristica] = makespan
 
-    # Random precisa do solver próprio (roda 10x e fica com a melhor)
+    # Important ** Random precisa do solver próprio (roda 10x e fica com a melhor)
     makespan_random, _ = random_solver(caminho, tentativas=10)
     resultados[nome_instancia]["Random"] = makespan_random
 
