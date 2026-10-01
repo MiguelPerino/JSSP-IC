@@ -7,10 +7,6 @@ Para a heurística Random, o tempo medido já inclui as 10 tentativas
 (é o tempo real do método como ele é usado no trabalho, não de uma
 tentativa isolada).
 
-Gera:
-    - tempos_execucao.csv: tempo (em segundos) de cada heurística em
-      cada instância
-    - um resumo no terminal com o tempo médio/total de cada heurística
 """
 import os
 import csv
@@ -74,9 +70,6 @@ with open("tempos_execucao.csv", "w", newline="", encoding="utf-8-sig") as f:
         writer.writerow(linha)
 
 print()
-print("=" * 80)
-print("RESUMO - TEMPO MÉDIO E TOTAL POR HEURÍSTICA (162 instâncias)")
-print("=" * 80)
 print(f"{'Heurística':<10}{'Tempo médio (s)':>18}{'Tempo total (s)':>18}")
 print("-" * 46)
 
@@ -85,5 +78,3 @@ for h in nomes_heuristicas:
     media = sum(tempos) / len(tempos)
     total = sum(tempos)
     print(f"{h:<10}{media:>18.4f}{total:>18.4f}")
-
-print("=" * 80)
