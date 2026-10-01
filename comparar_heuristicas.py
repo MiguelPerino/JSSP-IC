@@ -1,6 +1,6 @@
 """
 Roda TODAS as heurísticas em TODAS as instâncias e gera uma tabela
-comparativa (formato pivotado, igual fizemos no projeto de sequenciamento):
+comparativa
 
     Instância | SPT | LPT | MWKR | LWKR | FIFO | Random | Melhor | Gap SPT | Gap LPT | ...
 
@@ -89,7 +89,6 @@ with open("comparacao_jssp.csv", "w", newline="", encoding="utf-8-sig") as f:
         writer.writerow(linha)
 
 print()
-print("=" * 80)
 print("Arquivo comparacao_jssp.csv criado com sucesso!")
 print()
 print("HEURÍSTICAS TESTADAS:")
@@ -100,4 +99,3 @@ print("Colunas do CSV:")
 print("  - Makespan de cada heurística")
 print("  - Melhor makespan (menor entre todas, naquela instância)")
 print("  - Gap de cada heurística em relação ao melhor da instância")
-print("=" * 80)
