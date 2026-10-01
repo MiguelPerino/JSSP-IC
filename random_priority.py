@@ -9,8 +9,6 @@ from main import (
 
 def prioridade_random(candidato):
     """
-    Regra Random.
-
     Quando há empate, escolhe aleatoriamente entre os candidatos
     empatados (não usa nenhum dado do job, só sorteia um número).
     """
@@ -20,9 +18,8 @@ def prioridade_random(candidato):
 def solver(path_instancia, verbose=False, tentativas=10):
     """
     Como a escolha é aleatória, rodamos a simulação várias vezes
-    (padrão: 10) pra essa MESMA instância e devolvemos a MELHOR solução
-    encontrada entre as tentativas - igual fizemos no Random Insertion
-    do projeto de sequenciamento anterior.
+    (10) pra essa MESMA instância e devolvemos a MELHOR solução
+    encontrada entre as tentativas
     """
     melhor_makespan = float('inf')
     melhor_cronograma = None
