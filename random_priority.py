@@ -10,7 +10,7 @@ from main import (
 def prioridade_random(candidato):
     """
     Quando há empate, escolhe aleatoriamente entre os candidatos
-    empatados (não usa nenhum dado do job, só sorteia um número).
+    empatados (não usa nenhum dado do job, só sorteia um número). #Pode gerar resultados bons, vemos quando rodamos com todas as outras heuristicas
     """
     return random.random()
 
